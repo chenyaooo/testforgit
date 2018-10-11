@@ -28,3 +28,9 @@
   - 查看提交记录的详细差异 `git log -p`
   - 所有提交在一行显示 `git log --pretty=oneline` ，提交量很大时适用
   - 只显示简单的增减行数**统计**，不显示内部细节 `git log --stat`
+
+
+
+- 撤销工作目录中file的修改 `git checkout -- file`
+  - file自修改后没有提交到index，撤销修改就是回到当前版本库（commit）中的版本
+  - file已经提交到index，又做了修改，撤销修改就是回到index的版本
