@@ -52,11 +52,20 @@
 
 - 每一个仓库都有分支，不论本地还是远程
 - 查看分支 `git branch`
-- 创建新分支 `git branc <name>`
+- 创建新分支 `git branch <name>`
 - 切换分支 `git checkout <name>`
-- 创建分支并切换到该分支 `git checkout -b <name>`
+- **创建分支并切换到该分支** `git checkout -b <name>`
 - 合并某分支到当前分支 `git merge <name>`
 - 删除某分支 `git branch -d <name>`
+
+
+
+### 分支冲突
+
+- 当连个分支内容有冲突时，无法合并。要先手动解决冲突，再提交。
+- 分支合并默认使用的是`Fast Forward`，合并后如果删除某个分支，在log上是无法看到这个分支的信息的。
+- 为保证log能看到合并分支的历史记录，应该在合并时禁用fast forward `git merge --no-ff -m "info" <branchname>`
+- 禁用ff时会强制产生一次commit，因此可以使用`-m`参数，加上提交信息
 
 
 
